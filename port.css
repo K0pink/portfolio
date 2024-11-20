@@ -30,6 +30,9 @@ justify-content: end;
 z-index:100 ;
 }
 
+#navbar{
+    position: fixed;
+}
 
 
 .porty{
@@ -437,5 +440,19 @@ h4{
     justify-content: center;
     align-items: center;
    }
-   
-   
+
+   @media only screen and (max-width:800px){
+    .home, .about, .services, .portfolio, .contact, .navbar {
+       width: 100%;
+    }
+  }
+  @media only screen and (max-width:300px){
+    .home, .about, .services, .portfolio, .contact, .navbar {
+       width: 100%;
+    }
+  }
+  @media only screen and (max-width:500px){
+    .home, .about, .services, .portfolio, .contact .navbar {
+       width: 100%;
+    }
+  }
