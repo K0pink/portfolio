@@ -199,12 +199,12 @@
    function sendEmail() {
     const messageParams = {
       name: document.getElementById('name').value, 
-      email: document.getElementByid('email').value,
+      email: document.getElementById('email').value,
       message: document.getElementById('message' ).value
     };
     emailjs.send('service_gkedqdr', 'template_m98ewdd', messageParams).then(function(response){
       console.log('Success!', response.status, response.text);
-      document.getElementByid('form').reset();
+      document.getElementById('form').reset();
       alert('Email sent successfully');
     }, function(error){
       console.log('Failed ...', error);
