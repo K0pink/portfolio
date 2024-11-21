@@ -124,7 +124,7 @@ span{
  margin-top: 100px;
    }   
 
-    .hi{
+.hi{
  font-size: 40px;
  margin-bottom: 10px;
 color: white;
@@ -442,8 +442,9 @@ h4{
    }
 
    @media only screen and (max-width:800px){
-    .home, .about, .services, .portfolio, .contact, .navbar {
+    .home, .about, .services, .portfolio, .contact, .navbar, .hi {
        width: 100%;
+       font-size: 20px;
     }
   }
   @media only screen and (max-width:300px){

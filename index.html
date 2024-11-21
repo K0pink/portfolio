@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="port.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
 </head>
 <body>
       <div class="navbar" id="navbar" >
@@ -163,7 +164,7 @@
 
             <section class="contact" id="contact">
               <h2 class="contactc">Contact <Span>Me!!</Span></h2>
-              <form action="#">
+              <form action="#" id="form">
                <div class="inputbox">
                 <input type="text" name="" id="" placeholder="Full Name">
                 <input type="email" placeholder="Email" name="" id="">
@@ -185,7 +186,31 @@
         </div>
       </footer>
 
-      
+      <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "xXGN5DPzu8n1NIxVj",
+      });
+   })();
+
+   function sendEmail() {
+    const messageParams = {
+      name: document.getElementById('name').value, 
+      email: document.getElementByid('email').value,
+      message: document.getElementById('message' ).value
+    };
+    emailjs.send('service_gkedqdr', 'template_m98ewdd', messageParams).then(function(response){
+      console.log('Success!', response.status, response.text);
+      document.getElementByid('form').reset();
+      alert('Email sent successfully');
+    }, function(error){
+      console.log('Failed ...', errro);
+    });
+  }
+</script>
 
 </body>
 </html>
