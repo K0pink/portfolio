@@ -164,7 +164,7 @@
 
             <section class="contact" id="contact">
               <h2 class="contactc">Contact <Span>Me!!</Span></h2>
-              <form action="#" id="form">
+              <form action="#" id="form" onsubmit="sendEmail(); return false;">
                <div class="inputbox">
                 <input type="text" name="name" id="name" placeholder="Full Name">
                 <input type="email" placeholder="Email" name="email" id="email">
@@ -174,7 +174,7 @@
                 <input type="text" placeholder="Mail Topic" name="" id="" >
                </div>
                <textarea name="message" cols="30"  rows="5" id="message" placeholder="Type Your Message"></textarea>
-               <button><input type="submit" value="Send"></button>
+               <button><input type="submit"></button>
              </form>
             </section>
              
